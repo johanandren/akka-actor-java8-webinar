@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2016 Lightbend Inc. <http://www.lightbend.com>
  */
-package com.lightbend.akkasample.model;
+package com.lightbend.akkasample.sample4;
 
 public final class Product {
   public final long id;

@@ -15,6 +15,21 @@
         </dependency>
         <dependency>
             <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-http-core_2.11</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-http-experimental_2.11</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-http-jackson-experimental_2.11</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-testkit_2.11</artifactId>
             <version>${akka.version}</version>
             <scope>test</scope>
@@ -36,21 +51,6 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <mainClass>com.lightbend.akkasample.App</mainClass>
                 </configuration>
             </plugin>
         </plugins>

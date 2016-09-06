@@ -41,6 +41,7 @@ public class SampleTest {
   public void testPingPongInteraction() {
     new JavaTestKit(system) {{
 
+
       new Within(duration("3 seconds")) {
         protected void run() {
           Props props = Props.create(PingActor.class);
