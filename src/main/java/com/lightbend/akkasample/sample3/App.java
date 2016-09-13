@@ -3,6 +3,7 @@
  */
 package com.lightbend.akkasample.sample3;
 
+import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import com.lightbend.akkasample.StdIn;
 
@@ -17,6 +18,11 @@ public class App {
   public static void main(String[] args) {
     ActorSystem system = ActorSystem.create();
 
+    final ActorRef supervisor = system.actorOf(Supervisor.props(), "supervisor");
+
+    for (int i = 0; i < 10; i++) {
+      supervisor.tell(new NonTrustWorthyChild.Command(), ActorRef.noSender());
+    }
 
     System.out.println("ENTER to terminate");
     StdIn.readLine();
